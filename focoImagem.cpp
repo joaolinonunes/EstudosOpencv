@@ -27,8 +27,8 @@ int main(){
 	imshow("Imagem Blur", imgBlur); //mostra a imagem borrada
 	imshow("Imagem Canny",imgCanny); //mostra somente as bordas da imagem
 	imshow("Imagem Dilation", imgDil); //mostra somente as bordas da imagem dilatadas
-	imshow("Imagem Erode",imgErode); ////mostra somente as bordas da imagem dilatadas refinadas
+	imshow("Imagem Erode",imgErode); //mostra somente as bordas da imagem dilatadas refinadas
 	waitKey(0);
-	
+	//TEST PULL
 	return 0;
 	}
