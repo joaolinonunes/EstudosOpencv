@@ -9,10 +9,10 @@ using namespace std;
 
 int main(){
 	
-	string path = "/home/joao/Área de Trabalho/img/parede.jpg";
-	Mat img = imread(path);
+	string path = "/home/joao/Área de Trabalho/img/parede.jpg"; //o caminho onde esta a imagem
+	Mat img = imread(path); //classe Mat armazena imagem matriz
 	Mat imgGray, imgBlur, imgCanny, imgDil, imgErode; //declara o nome das imagens
-	cout << img.size() <<endl;
+	cout << img.size() <<endl; //mostra o tamanho da imagem
 	
 	cvtColor(img,imgGray, COLOR_BGR2GRAY); //deixa a imagem cinza
 	GaussianBlur(img, imgBlur, Size(3, 3),3,0); //borra a imagem quanto maior o numero mais borra
@@ -22,12 +22,12 @@ int main(){
 	dilate(imgCanny, imgDil, kernel); //dilata as linhas da borda.
 	erode(imgDil, imgErode, kernel); //refina as linhas dilatadas
 	
-	imshow("Imagem",img);
-	imshow("Imagem Gray", imgGray);
-	imshow("Imagem Blur", imgBlur);
-	imshow("Imagem Canny",imgCanny);
-	imshow("Imagem Dilation", imgDil);
-	imshow("Imagem Erode",imgErode);
+	imshow("Imagem",img); //mostra a imagem 
+	imshow("Imagem Gray", imgGray); //mostra a imagem com cinza 
+	imshow("Imagem Blur", imgBlur); //mostra a imagem borrada
+	imshow("Imagem Canny",imgCanny); //mostra somente as bordas da imagem
+	imshow("Imagem Dilation", imgDil); //mostra somente as bordas da imagem dilatadas
+	imshow("Imagem Erode",imgErode); ////mostra somente as bordas da imagem dilatadas refinadas
 	waitKey(0);
 	
 	return 0;
